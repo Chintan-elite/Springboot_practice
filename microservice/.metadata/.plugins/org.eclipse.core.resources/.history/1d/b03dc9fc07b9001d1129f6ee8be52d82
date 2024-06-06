@@ -1,0 +1,9 @@
+package com.user.entity;
+
+public class Contact {
+	private Long cId;
+	private String email;
+	private String contactName;
+	private Long userId;
+	
+}

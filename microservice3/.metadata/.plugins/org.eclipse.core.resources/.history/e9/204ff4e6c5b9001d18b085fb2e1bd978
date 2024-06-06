@@ -1,0 +1,9 @@
+server.port=8999
+
+eureka.instance.hostname=localhost
+
+spring.application.name=api-gateway
+
+spring.cloud.gateway.routes-id:user-service
+
+spring.cloud.gateway.routes-uri:user-service

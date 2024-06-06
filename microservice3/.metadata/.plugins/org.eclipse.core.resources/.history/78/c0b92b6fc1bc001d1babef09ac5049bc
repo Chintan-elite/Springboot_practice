@@ -1,0 +1,11 @@
+package com.apigateway.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FallBackController {
+	
+	public Stirng userServiceFallback() {
+		return "User service down at this time !!!";
+	}
+}

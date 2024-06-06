@@ -1,0 +1,44 @@
+server:
+  port: 8999
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: user-service
+        uri:
+          lb://user-service
+        predicates:
+        - Path=/user/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: user-service
+            fallbackuri: forward/userServiceFallback
+        
+      - id: contect-service
+        uri:
+          lb://contect-service
+        predicates:
+        - Path=/contact/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: contect-service
+            fallbackuri: forward/contectServiceFallback
+      
+     
+     
+
+  
+        
+      
+    
+    
+    

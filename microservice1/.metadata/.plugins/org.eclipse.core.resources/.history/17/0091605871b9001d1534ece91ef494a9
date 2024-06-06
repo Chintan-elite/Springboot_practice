@@ -1,0 +1,15 @@
+package com.contact.service;
+
+import java.util.List;
+
+import com.contact.entity.Contact;
+
+public class ContactServiceImpl  implements ContactService{
+
+	@Override
+	public List<Contact> getContactsOfUser(Long userId) {
+		
+		return null;
+	}
+
+}

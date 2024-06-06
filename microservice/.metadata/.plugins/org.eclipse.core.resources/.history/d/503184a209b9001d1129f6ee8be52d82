@@ -1,0 +1,8 @@
+package com.user.entity;
+
+public class Snippet {
+	public static void main(String[] args) {
+		new User(1120L, "chintan", "9099613052")
+	}
+}
+
